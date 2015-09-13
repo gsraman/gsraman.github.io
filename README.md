@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [![build status](https://travis-ci.org/FezVrasta/bootstrap-material-design.svg?branch=master)](https://travis-ci.org/FezVrasta/bootstrap-material-design)
 [![gratipay](https://img.shields.io/gratipay/FezVrasta.svg)](https://gratipay.com/FezVrasta)
 [![Bower version](https://badge.fury.io/bo/bootstrap-material-design.svg)](https://github.com/FezVrasta/bootstrap-material-design)
@@ -240,3 +241,7 @@ Read more about [Bootstrap Material Datepicker](https://github.com/T00rk/bootstr
 ## Compatibility
 
 Currently, Material Design for Bootstrap supports Google Chrome (tested v37+), Mozilla Firefox (tested 30+), and Internet Explorer (tested 11+). Mobile browsers are not currently tested but they may work.
+=======
+# gsraman.github.io
+A webpage that lets you send Postmark emails in seconds
+>>>>>>> bce0b1d9588a9f9bbde137928d66816269cfb687
