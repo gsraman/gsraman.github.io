@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,8 +6,8 @@
 
     <title>Network Simulator Tutorial</title>
 
-    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-    <meta name="author" content="Hakim El Hattab">
+    <meta name="description" content="Tutorial on network simulation">
+    <meta name="author" content="Sundar Raman G">
 
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -130,8 +130,156 @@
                         Tcl is a general purpose multi-paradigm system programming language. It is a scripting language that aims at providing the ability for applications to communicate with each other.
                     </p>
                 </section>
+                <section>
+                  <h2>Print statements</h2>
+                  <pre>
+                    <code class="tcl">
+% puts "Hello, World!" ;#I'm a comment
+Hello World
+% puts [expr 3 + 2] ;# print sum of the 3 and 2
+5
+% puts "Hello\nWorld"
+Hello
+World
+                   </code>
+                  </pre>
+                </section>
+                <section>
+                  <h2>Variables</h2>
+                  <pre>
+                    <code class="tcl">
+% set myVariable 18
+18
+% puts $myVariable
+18
+% set myVariable 18
+% puts [expr $myVariable + 6 + 9]
+33
+                  </code>
+                  </pre>
+                </section>
+                <section>
+                  <h2>Dynamic assigning</h2>
+                  <pre>
+                    <code class="tcl">
+% set myVariable 18
+18
+% set sum [ $myVariable + 1 ];
+19
+% puts $sum
+19
+                  </code>
+                  </pre>
+                </section>
+                <section>
+                  <h2>Strings</h2>
+                  <pre>
+                    <code class="tcl">
+% set myVariable hello
+% puts $myVariable
+hello
+% set myVariable "hello world"
+% puts $myVariable
+hello world
+% set myVariable {hello world}
+% puts $myVariable
+hello world
 
+                   </code>
+                  </pre>
+                </section>
+                <section>
+                  <h2>Lists and associative arrays</h2>
+                  <pre>
+                    <code class="tcl">
+% set myVariable {red green blue}
+% puts [lindex $myVariable 2]
+blue
+% puts [array size $myVariable]
+3
+% set marks(english) 80
+% set marks(mathematics) 90
+% puts $marks(mathematics)
+90
+% puts $marks(english)
+80
+
+                   </code>
+                  </pre>
+                </section>
+                <section>
+                  <h2>Operators</h2>
+                  <p>
+                    <ul>
+                      <li>Arthimetic operators</li>
+                      <li>Logical operators</li>
+                      <li>Relational Operators</li>
+                      <li>Unary Operators</li>
+                      <li>Bitwise Operators</li>
+                    </ul>
+                  </p>
+                </section>
+
+            <section>
+              <h2>Decision Making</h2>
+              <pre>
+                <code class="tcl">
+#!/usr/bin/tclsh
+set a 100
+#check the boolean condition
+if { $a == 10 } {
+# if condition is true then print the following
+puts "Value of a is 10"
+} elseif { $a == 20 } {
+# if else if condition is true
+puts "Value of a is 20"
+} elseif { $a == 30 } {
+# if else if condition is true
+puts "Value of a is 30"
+} else {
+# if none of the conditions is true
+puts "None of the values is matching"
+}
+puts "Exact value of a is: $a"
+               </code>
+              </pre>
+<pre>
+None of the values is matching
+Exact value of a is: 100
+</pre>
             </section>
+            <section>
+              <h2>Conditional Operator</h2>
+              <pre>
+                <code class="tcl">
+% Exp1 ? Exp2 : Exp3; #Figure it out
+               </code>
+              </pre>
+            </section>
+
+            <section>
+              <h2>Looping</h2>
+              <pre>
+                <code class="tcl">
+#while loop execution
+set a 10
+
+while { $a < 20 } {
+puts "value of a: $a"
+incr a
+}
+
+# for loop execution
+for { set a 10}
+{$a < 20} {incr a} {
+puts "value of a: $a"
+}
+
+               </code>
+              </pre>
+            </section>
+
+          </section>
 
             <section>
                 <section>
