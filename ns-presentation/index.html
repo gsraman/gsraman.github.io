@@ -1,42 +1,332 @@
-<!DOCTYPE html>
-<!-- Created by pdf2htmlEX (https://github.com/coolwanglu/pdf2htmlex) -->
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!doctype html>
+<html lang="en">
+
 <head>
-<meta charset="utf-8"/>
+    <meta charset="utf-8">
 
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-<link rel="stylesheet" href="base.min.css"/>
-<link rel="stylesheet" href="fancy.min.css"/>
-<link rel="stylesheet" href="main.css"/>
-<script src="compatibility.min.js"></script>
-<script src="theViewer.min.js"></script>
-<script>
-try{
-theViewer.defaultViewer = new theViewer.Viewer({});
-}catch(e){}
-</script>
-<title></title>
+    <title>Network Simulator Tutorial</title>
+
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/league.css" id="theme">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
 </head>
-<body>
-<div id="sidebar">
-<div id="outline">
-</div>
-</div>
-<div id="page-container">
-<div id="pf1" class="pf w0 h0" data-page-no="1"><div class="pc pc1 w0 h0"><img class="bi x0 y0 w1 h1" alt="" src="bg1.png"/><div class="t m0 x1 h2 y1 ff1 fs0 fc0 sc0 ls0 ws0">Basics of Network Simulator 2</div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
-<div id="pf2" class="pf w0 h0" data-page-no="2"><div class="pc pc2 w0 h0"><img class="bi x0 y0 w1 h1" alt="" src="bg2.png"/><div class="t m0 x2 h2 y2 ff1 fs0 fc0 sc0 ls0 ws0">NS-2</div><div class="t m0 x3 h3 y3 ff2 fs1 fc0 sc0 ls0 ws0"><span class="_ _0"> </span><span class="ff1 fs2">Discrete event simulator</span></div><div class="t m0 x3 h3 y4 ff2 fs1 fc0 sc0 ls0 ws0"><span class="_ _0"> </span><span class="ff1 fs2">Works at packet level</span></div><div class="t m0 x3 h3 y5 ff2 fs1 fc0 sc0 ls0 ws0"><span class="_ _0"> </span><span class="ff1 fs2">Protocols  supported: TCP,UDP, FTP,HTTP</span></div><div class="t m0 x3 h3 y6 ff2 fs1 fc0 sc0 ls0 ws0"><span class="_ _0"> </span><span class="ff1 fs2">Simulation of Wired and Wireless networks</span></div><div class="t m0 x3 h3 y7 ff2 fs1 fc0 sc0 ls0 ws0"><span class="_ _0"> </span><span class="ff1 fs2">Unix based</span></div><div class="t m0 x3 h3 y8 ff2 fs1 fc0 sc0 ls0 ws0"><span class="_ _0"> </span><span class="ff1 fs2">Uses TCL as scripting language </span></div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
-<div id="pf3" class="pf w0 h0" data-page-no="3"><div class="pc pc3 w0 h0"><img class="bi x0 y0 w1 h1" alt="" src="bg3.png"/><div class="t m0 x4 h2 y2 ff1 fs0 fc0 sc0 ls0 ws0">Architecture</div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
-<div id="pf4" class="pf w0 h0" data-page-no="4"><div class="pc pc4 w0 h0"><img class="bi x0 y0 w1 h1" alt="" src="bg4.png"/><div class="t m0 x5 h2 y2 ff1 fs0 fc0 sc0 ls0 ws0">Implementation</div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
-<div id="pf5" class="pf w0 h0" data-page-no="5"><div class="pc pc5 w0 h0"><img class="bi x0 y0 w1 h1" alt="" src="bg5.png"/><div class="t m0 x6 h2 y2 ff1 fs0 fc0 sc0 ls0 ws0">Installation</div><div class="t m0 x3 h3 y3 ff2 fs1 fc0 sc0 ls0 ws0"><span class="_ _0"> </span><span class="ff1 fs2">ns-2 package</span></div><div class="t m0 x7 h4 y9 ff3 fs3 fc0 sc0 ls0 ws0"><span class="_ _1"> </span><span class="ff1 fs4">Dependencies: g++, tcl, otcl, tclcl</span></div><div class="t m0 x3 h3 ya ff2 fs1 fc0 sc0 ls0 ws0"><span class="_ _0"> </span><span class="ff1 fs2">NSG.jar (TCL Script generator)</span></div><div class="t m0 x7 h4 yb ff3 fs3 fc0 sc0 ls0 ws0"><span class="_ _1"> </span><span class="ff1 fs4">Creating scenarios for tcl</span></div><div class="t m0 x3 h3 yc ff2 fs1 fc0 sc0 ls0 ws0"><span class="_ _0"> </span><span class="ff1 fs2">NAM  (Network Animator)</span></div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
-<div id="pf6" class="pf w0 h0" data-page-no="6"><div class="pc pc6 w0 h0"><img class="bi x0 y0 w1 h1" alt="" src="bg6.png"/><div class="t m0 x8 h2 y2 ff1 fs0 fc0 sc0 ls0 ws0">Debian Based installation</div><div class="t m0 x3 h3 y3 ff2 fs1 fc0 sc0 ls0 ws0"><span class="_ _0"> </span><span class="ff1 fs2">sudo apt-get install ns2</span></div><div class="t m0 x3 h3 y4 ff2 fs1 fc0 sc0 ls0 ws0"><span class="_ _0"> </span><span class="ff1 fs2">sudo apt-get purge nam</span></div><div class="t m0 x3 h3 y5 ff2 fs1 fc0 sc0 ls0 ws0"><span class="_ _0"> </span><span class="ff1 fs2">wget --user-agent=&quot;Mozilla/5.0 (Windows NT </span></div><div class="t m0 x9 h3 yd ff1 fs2 fc0 sc0 ls0 ws0">5.2; rv:2.0.1) Gecko/20100101 Firefox/4.0.1&quot; </div><div class="t m0 x9 h3 ye ff1 fs2 fc0 sc0 ls0 ws0">&quot;http://technobytz.com/wp-</div><div class="t m0 x9 h3 yf ff1 fs2 fc0 sc0 ls0 ws0">content/uploads/2015/11/nam_1.14_amd64.zip&quot;</div><div class="t m0 x3 h3 y10 ff2 fs1 fc0 sc0 ls0 ws0"><span class="_ _0"> </span><span class="ff1 fs2">unzip nam_1.14_amd64.zip</span></div><div class="t m0 x3 h3 y11 ff2 fs1 fc0 sc0 ls0 ws0"><span class="_ _0"> </span><span class="ff1 fs2">sudo dpkg -i nam_1.14_amd64.deb</span></div><div class="t m0 x3 h3 y12 ff2 fs1 fc0 sc0 ls0 ws0"><span class="_ _0"> </span><span class="ff1 fs2">sudo apt-mark hold nam</span></div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
-<div id="pf7" class="pf w0 h0" data-page-no="7"><div class="pc pc7 w0 h0"><img class="bi x0 y0 w1 h1" alt="" src="bg7.png"/><div class="t m0 xa h2 y13 ff1 fs0 fc0 sc0 ls0 ws0">TCL basic syntax and defns</div><div class="t m0 xb h5 y14 ff1 fs5 fc0 sc0 ls0 ws0">Tcl is a general purpose multi-paradigm system programming </div><div class="t m0 xb h5 y15 ff1 fs5 fc0 sc0 ls0 ws0">language. It is a scripting language that aims at providing the </div><div class="t m0 xb h5 y16 ff1 fs5 fc0 sc0 ls0 ws0">ability for applications to communicate with each other.</div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
-<div id="pf8" class="pf w0 h0" data-page-no="8"><div class="pc pc8 w0 h0"><img class="bi x0 y0 w1 h1" alt="" src="bg8.png"/><div class="t m0 xc h2 y2 ff1 fs0 fc0 sc0 ls0 ws0">NS by example</div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
-<div id="pf9" class="pf w0 h0" data-page-no="9"><div class="pc pc9 w0 h0"><img class="bi x0 y0 w1 h1" alt="" src="bg9.png"/><div class="t m0 xd h2 y2 ff1 fs0 fc0 sc0 ls0 ws0">Event Scheduler</div><div class="t m0 x3 h3 y3 ff2 fs1 fc0 sc0 ls0 ws0"><span class="_ _0"> </span><span class="ff1 fs2">set ns [new Simulator]</span></div><div class="t m0 x3 h3 y4 ff2 fs1 fc0 sc0 ls0 ws0"><span class="_ _0"> </span><span class="ff1 fs2">$ns use-scheduler Heap</span></div><div class="t m0 x3 h3 y5 ff2 fs1 fc0 sc0 ls0 ws0"><span class="_ _0"> </span><span class="ff1 fs2">$ns at 300.5 &quot;complete_sim&quot;</span></div><div class="t m0 x3 h3 y6 ff2 fs1 fc0 sc0 ls0 ws0"><span class="_ _0"> </span><span class="ff1 fs2">. . .</span></div><div class="t m0 x3 h3 y8 ff2 fs1 fc0 sc0 ls0 ws0"><span class="_ _0"> </span><span class="ff1 fs2">proc complete_sim {} {</span></div><div class="t m0 x3 h3 y17 ff2 fs1 fc0 sc0 ls0 ws0"><span class="_ _0"> </span><span class="ff1 fs2">. . .</span></div><div class="t m0 x3 h3 y18 ff2 fs1 fc0 sc0 ls0 ws0"><span class="_ _0"> </span><span class="ff1 fs2">} </span></div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
-<div id="pfa" class="pf w0 h0" data-page-no="a"><div class="pc pca w0 h0"><img class="bi x0 y0 w1 h1" alt="" src="bga.png"/><div class="t m0 xe h2 y2 ff1 fs0 fc0 sc0 ls0 ws0">Packet Format</div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
-<div id="pfb" class="pf w0 h0" data-page-no="b"><div class="pc pcb w0 h0"><img class="bi x0 y0 w1 h1" alt="" src="bgb.png"/><div class="t m0 xf h3 y19 ff1 fs2 fc0 sc0 ls0 ws0">- By Sundar Raman</div></div><div class="pi" data-data='{"ctm":[1.000000,0.000000,0.000000,1.000000,0.000000,0.000000]}'></div></div>
-</div>
-<div class="loading-indicator">
 
-</div>
+<body>
+
+    <div class="reveal">
+
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <section data-transition="convex">
+                <h2>Basics of Network Simulator 2</h2>
+
+
+            </section>
+
+            <section data-transition="convex">
+                <section>
+                    <h2>Introduction to NS-2</h2>
+
+                    <p>
+                        <ul>
+                            <li>Discrete event simulator</li>
+                            <li>Works at packet level</li>
+                            <li>Protocols supported: TCP,UDP, FTP,HTTP</li>
+                            <li>Simulation of Wired and Wireless networks</li>
+                            <li>Unix based</li>
+                            <li>Uses TCL as scripting language</li>
+                        </ul>
+                    </p>
+                </section>
+                <section>
+                    <h2>Architecture of NS-2</h2>
+
+                    <p>
+                        <img src="img/arch.png">
+                    </p>
+                </section>
+                <section>
+                    <h2>Implementation of NS-2</h2>
+
+                    <p>
+                        <img src="img/implementation.png">
+                    </p>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2>Requirements and Installation</h2>
+
+                    <p>
+                        <ul>
+                            <li>ns-2 package
+                                <ul>
+                                    <li><strong>Dependencies:</strong> g++, tcl, otcl, tclcl</li>
+                                </ul>
+                            </li>
+                            <li>NSG.jar
+                                <ul>
+                                    <li>Creating scenarios for tcl.</li>
+                                    <li><a href="NSG.jar">Dowload Here</a></li>
+                                </ul>
+                            </li>
+                            <li>NAM
+                                <ul>
+                                    <li>Network Animator</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </p>
+                </section>
+                <section>
+                    <h2>Installation in Ubuntu</h2>
+
+                    <p>
+                        <pre>
+                <code class="bash">
+  $ sudo apt-get install ns2
+  $ sudo apt-get purge nam
+  $ wget --user-agent="Mozilla/5.0 (Windows NT 5.2; rv:2.0.1) Gecko/20100101 Firefox/4.0.1" "http://technobytz.com/wpcontent/uploads/2015/11/nam_1.14_amd64.zip"
+  $ unzip nam_1.14_amd64.zip
+  $ sudo dpkg -i nam_1.14_amd64.deb
+  $ sudo apt-mark hold nam
+  $ sudo apt-get install openjdk-8-jre
+  $ java -jar NSG.jar
+                </code>
+              </pre>
+                    </p>
+                </section>
+
+            </section>
+
+            <section>
+                <section>
+                    <h2>TCL basic syntax and defns</h2>
+                    <p>
+                        Tcl is a general purpose multi-paradigm system programming language. It is a scripting language that aims at providing the ability for applications to communicate with each other.
+                    </p>
+                </section>
+
+            </section>
+
+            <section>
+                <section>
+                    <h2>NS-2 By Example</h2>
+                    <img src="img/example.png">
+                </section>
+                <section>
+                    <h2>TCL script for above example</h2>
+                    <pre><code class="tcl" data-trim contenteditable>
+#Create a simulator object
+set ns [new Simulator]
+
+#Define different colors for data flows (for NAM)
+$ns color 1 Blue
+$ns color 2 Red
+
+#Open the NAM trace file
+set nf [open out.nam w]
+$ns namtrace-all $nf
+
+#Define a 'finish' procedure
+proc finish {} {
+        global ns nf
+        $ns flush-trace
+        #Close the NAM trace file
+        close $nf
+        #Execute NAM on the trace file
+        exec nam out.nam &
+        exit 0
+}
+
+#Create four nodes
+set n0 [$ns node]
+set n1 [$ns node]
+set n2 [$ns node]
+set n3 [$ns node]
+
+#Create links between the nodes
+$ns duplex-link $n0 $n2 2Mb 10ms DropTail
+$ns duplex-link $n1 $n2 2Mb 10ms DropTail
+$ns duplex-link $n2 $n3 1.7Mb 20ms DropTail
+
+#Set Queue Size of link (n2-n3) to 10
+$ns queue-limit $n2 $n3 10
+
+#Give node position (for NAM)
+$ns duplex-link-op $n0 $n2 orient right-down
+$ns duplex-link-op $n1 $n2 orient right-up
+$ns duplex-link-op $n2 $n3 orient right
+
+#Monitor the queue for link (n2-n3). (for NAM)
+$ns duplex-link-op $n2 $n3 queuePos 0.5
+
+
+#Setup a TCP connection
+set tcp [new Agent/TCP]
+$tcp set class_ 2
+$ns attach-agent $n0 $tcp
+set sink [new Agent/TCPSink]
+$ns attach-agent $n3 $sink
+$ns connect $tcp $sink
+$tcp set fid_ 1
+
+#Setup a FTP over TCP connection
+set ftp [new Application/FTP]
+$ftp attach-agent $tcp
+$ftp set type_ FTP
+
+
+#Setup a UDP connection
+set udp [new Agent/UDP]
+$ns attach-agent $n1 $udp
+set null [new Agent/Null]
+$ns attach-agent $n3 $null
+$ns connect $udp $null
+$udp set fid_ 2
+
+#Setup a CBR over UDP connection
+set cbr [new Application/Traffic/CBR]
+$cbr attach-agent $udp
+$cbr set type_ CBR
+$cbr set packet_size_ 1000
+$cbr set rate_ 1mb
+$cbr set random_ false
+
+
+#Schedule events for the CBR and FTP agents
+$ns at 0.1 "$cbr start"
+$ns at 1.0 "$ftp start"
+$ns at 4.0 "$ftp stop"
+$ns at 4.5 "$cbr stop"
+
+#Detach tcp and sink agents (not really necessary)
+$ns at 4.5 "$ns detach-agent $n0 $tcp ; $ns detach-agent $n3 $sink"
+
+#Call the finish procedure after 5 seconds of simulation time
+$ns at 5.0 "finish"
+
+#Print CBR packet size and interval
+puts "CBR packet size = [$cbr set packet_size_]"
+puts "CBR interval = [$cbr set interval_]"
+
+#Run the simulation
+$ns run
+
+  </code></pre>
+                </section>
+            </section>
+
+            <section>
+                <h2>Event Scheduler</h2>
+
+                <p>
+                    <pre>
+                  <code class="tcl">
+set ns [new Simulator]
+$ns use-scheduler Heap
+$ns at 300.5 "complete_sim"
+. . .
+proc complete_sim {} {
+. . .
+}
+                  </code>
+                </pre>
+                </p>
+            </section>
+
+            <section>
+              <h2>Packet Format</h2>
+
+              <img src="img/packet.png" alt="Packet Format" />
+            </section>
+
+            <section>
+              <h2>Thank You</h2>
+
+              <p>
+                  <small>Presentation by <a href="https://github.com/gsraman">Sundar Raman G</a></small><br>
+                  <small>Under CSI -BMSIT&M Student Chapter</small>
+              </p>
+            </section>
+
+
+
+
+
+        </div>
+
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+        // More info https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+            // More info https://github.com/hakimel/reveal.js#dependencies
+            dependencies: [{
+                src: 'lib/js/classList.js',
+                condition: function() {
+                    return !document.body.classList;
+                }
+            }, {
+                src: 'plugin/markdown/marked.js',
+                condition: function() {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: 'plugin/markdown/markdown.js',
+                condition: function() {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: 'plugin/highlight/highlight.js',
+                async: true,
+                callback: function() {
+                    hljs.initHighlightingOnLoad();
+                }
+            }, {
+                src: 'plugin/zoom-js/zoom.js',
+                async: true
+            }, {
+                src: 'plugin/notes/notes.js',
+                async: true
+            }]
+        });
+    </script>
+
 </body>
+
 </html>
