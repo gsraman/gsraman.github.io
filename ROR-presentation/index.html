@@ -47,365 +47,202 @@
 
             <section data-transition="convex">
                 <section>
-                    <h2>Introduction to Ruby and Rails Framework</h2>
+                    <h2>Introduction </h2>
 
                     <p>
-                      <h3>Ruby</h3>
-                      <p>
-                        A dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write.
-                      </p>
-                      <h3>Rails</h3>
-                      <p>
-                        Ruby on Rails, or simply Rails, is a server-side web application framework written in Ruby under the MIT License. Rails is a model–view–controller (MVC) framework, providing default structures for a database, a web service, and web pages.
-                      </p>
-                    </p>
-                </section>
-            
-            </section>
+                        <h3>Ruby</h3>
 
-            <section>
-                <section>
-                    <h2>Requirements and Installation</h2>
+                        <h3>Ruby on Rails (framework)</h3>
 
-                    <p>
-                        <ul>
-                            <li>ns-2 package
-                                <ul>
-                                    <li><strong>Dependencies:</strong> g++, tcl, otcl, tclcl</li>
-                                </ul>
-                            </li>
-                            <li>NSG.jar
-                                <ul>
-                                    <li>Creating scenarios for tcl.</li>
-                                    <li><a href="NSG.jar">Dowload Here</a></li>
-                                </ul>
-                            </li>
-                            <li>NAM
-                                <ul>
-                                    <li>Network Animator</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </p>
-                </section>
-                <section>
-                    <h2>Installation in Ubuntu</h2>
-
-                    <p>
-                        <pre>
-                <code class="bash">
-  $ sudo apt-get install ns2
-  $ sudo apt-get purge nam
-  $ wget --user-agent="Mozilla/5.0 (Windows NT 5.2; rv:2.0.1) Gecko/20100101 Firefox/4.0.1" "http://technobytz.com/wpcontent/uploads/2015/11/nam_1.14_amd64.zip"
-  $ unzip nam_1.14_amd64.zip
-  $ sudo dpkg -i nam_1.14_amd64.deb
-  $ sudo apt-mark hold nam
-  $ sudo apt-get install openjdk-8-jre
-  $ java -jar NSG.jar
-                </code>
-              </pre>
                     </p>
                 </section>
 
             </section>
 
             <section>
-                <section>
-                    <h2>TCL basic syntax and defns</h2>
-                    <p>
-                        Tcl is a general purpose multi-paradigm system programming language. It is a scripting language that aims at providing the ability for applications to communicate with each other.
-                    </p>
-                </section>
-                <section>
-                  <h2>Print statements</h2>
-                  <pre>
-                    <code class="tcl">
-% puts "Hello, World!" ;#I'm a comment
-Hello World
-% puts [expr 3 + 2] ;# print sum of the 3 and 2
-5
-% puts "Hello\nWorld"
-Hello
-World
-                   </code>
-                  </pre>
-                </section>
-                <section>
-                  <h2>Variables</h2>
-                  <pre>
-                    <code class="tcl">
-% set myVariable 18
-18
-% puts $myVariable
-18
-% set myVariable 18
-% puts [expr $myVariable + 6 + 9]
-33
-                  </code>
-                  </pre>
-                </section>
-                <section>
-                  <h2>Dynamic assigning</h2>
-                  <pre>
-                    <code class="tcl">
-% set myVariable 18
-18
-% set sum [ $myVariable + 1 ];
-19
-% puts $sum
-19
-                  </code>
-                  </pre>
-                </section>
-                <section>
-                  <h2>Strings</h2>
-                  <pre>
-                    <code class="tcl">
-% set myVariable hello
-% puts $myVariable
-hello
-% set myVariable "hello world"
-% puts $myVariable
-hello world
-% set myVariable {hello world}
-% puts $myVariable
-hello world
 
-                   </code>
-                  </pre>
-                </section>
-                <section>
-                  <h2>Lists and associative arrays</h2>
-                  <pre>
-                    <code class="tcl">
-% set myVariable {red green blue}
-% puts [lindex $myVariable 2]
-blue
-% puts [array size $myVariable]
-3
-% set marks(english) 80
-% set marks(mathematics) 90
-% puts $marks(mathematics)
-90
-% puts $marks(english)
-80
-
-                   </code>
-                  </pre>
-                </section>
-                <section>
-                  <h2>Operators</h2>
-                  <p>
-                    <ul>
-                      <li>Arthimetic operators</li>
-                      <li>Logical operators</li>
-                      <li>Relational Operators</li>
-                      <li>Unary Operators</li>
-                      <li>Bitwise Operators</li>
-                    </ul>
-                  </p>
-                </section>
-
-            <section>
-              <h2>Decision Making</h2>
-              <pre>
-                <code class="tcl">
-#!/usr/bin/tclsh
-set a 100
-#check the boolean condition
-if { $a == 10 } {
-# if condition is true then print the following
-puts "Value of a is 10"
-} elseif { $a == 20 } {
-# if else if condition is true
-puts "Value of a is 20"
-} elseif { $a == 30 } {
-# if else if condition is true
-puts "Value of a is 30"
-} else {
-# if none of the conditions is true
-puts "None of the values is matching"
-}
-puts "Exact value of a is: $a"
-               </code>
-              </pre>
-<pre>
-None of the values is matching
-Exact value of a is: 100
-</pre>
-            </section>
-            <section>
-              <h2>Conditional Operator</h2>
-              <pre>
-                <code class="tcl">
-% Exp1 ? Exp2 : Exp3; #Figure it out
-               </code>
-              </pre>
-            </section>
-
-            <section>
-              <h2>Looping</h2>
-              <pre>
-                <code class="tcl">
-#while loop execution
-set a 10
-
-while { $a < 20 } {
-puts "value of a: $a"
-incr a
-}
-
-# for loop execution
-for { set a 10}
-{$a < 20} {incr a} {
-puts "value of a: $a"
-}
-
-               </code>
-              </pre>
-            </section>
-
-          </section>
-
-            <section>
-                <section>
-                    <h2>NS-2 By Example</h2>
-                    <img src="img/example.png">
-                </section>
-                <section>
-                    <h2>TCL script for above example</h2>
-                    <pre><code class="tcl" data-trim contenteditable>
-#Create a simulator object
-set ns [new Simulator]
-
-#Define different colors for data flows (for NAM)
-$ns color 1 Blue
-$ns color 2 Red
-
-#Open the NAM trace file
-set nf [open out.nam w]
-$ns namtrace-all $nf
-
-#Define a 'finish' procedure
-proc finish {} {
-        global ns nf
-        $ns flush-trace
-        #Close the NAM trace file
-        close $nf
-        #Execute NAM on the trace file
-        exec nam out.nam &
-        exit 0
-}
-
-#Create four nodes
-set n0 [$ns node]
-set n1 [$ns node]
-set n2 [$ns node]
-set n3 [$ns node]
-
-#Create links between the nodes
-$ns duplex-link $n0 $n2 2Mb 10ms DropTail
-$ns duplex-link $n1 $n2 2Mb 10ms DropTail
-$ns duplex-link $n2 $n3 1.7Mb 20ms DropTail
-
-#Set Queue Size of link (n2-n3) to 10
-$ns queue-limit $n2 $n3 10
-
-#Give node position (for NAM)
-$ns duplex-link-op $n0 $n2 orient right-down
-$ns duplex-link-op $n1 $n2 orient right-up
-$ns duplex-link-op $n2 $n3 orient right
-
-#Monitor the queue for link (n2-n3). (for NAM)
-$ns duplex-link-op $n2 $n3 queuePos 0.5
-
-
-#Setup a TCP connection
-set tcp [new Agent/TCP]
-$tcp set class_ 2
-$ns attach-agent $n0 $tcp
-set sink [new Agent/TCPSink]
-$ns attach-agent $n3 $sink
-$ns connect $tcp $sink
-$tcp set fid_ 1
-
-#Setup a FTP over TCP connection
-set ftp [new Application/FTP]
-$ftp attach-agent $tcp
-$ftp set type_ FTP
-
-
-#Setup a UDP connection
-set udp [new Agent/UDP]
-$ns attach-agent $n1 $udp
-set null [new Agent/Null]
-$ns attach-agent $n3 $null
-$ns connect $udp $null
-$udp set fid_ 2
-
-#Setup a CBR over UDP connection
-set cbr [new Application/Traffic/CBR]
-$cbr attach-agent $udp
-$cbr set type_ CBR
-$cbr set packet_size_ 1000
-$cbr set rate_ 1mb
-$cbr set random_ false
-
-
-#Schedule events for the CBR and FTP agents
-$ns at 0.1 "$cbr start"
-$ns at 1.0 "$ftp start"
-$ns at 4.0 "$ftp stop"
-$ns at 4.5 "$cbr stop"
-
-#Detach tcp and sink agents (not really necessary)
-$ns at 4.5 "$ns detach-agent $n0 $tcp ; $ns detach-agent $n3 $sink"
-
-#Call the finish procedure after 5 seconds of simulation time
-$ns at 5.0 "finish"
-
-#Print CBR packet size and interval
-puts "CBR packet size = [$cbr set packet_size_]"
-puts "CBR interval = [$cbr set interval_]"
-
-#Run the simulation
-$ns run
-
-  </code></pre>
-                </section>
-            </section>
-
-            <section>
-                <h2>Event Scheduler</h2>
+                <h2>Installation</h2>
 
                 <p>
-                    <pre>
-                  <code class="tcl">
-set ns [new Simulator]
-$ns use-scheduler Heap
-$ns at 300.5 "complete_sim"
-. . .
-proc complete_sim {} {
-. . .
-}
-                  </code>
-                </pre>
+
+                    <a href="https://gorails.com/setup/ubuntu/14.04">https://gorails.com/setup/ubuntu/14.04</a>
+
                 </p>
+
+
+
+
             </section>
 
             <section>
-              <h2>Packet Format</h2>
+                <h2>Execution</h2>
+                <pre>
+                <code class="bash">
+mkdir rails_app
+cd rails_app
+rails new books -d mysql
+               </code>
 
-              <img src="img/packet.png" alt="Packet Format" />
+              </pre>
+            </section>
+
+
+            <section>
+                <b>database.yml</b>
+                <pre>
+                <code class="bash">
+adapter: mysql2
+encoding: utf8
+reconnect: false
+database: books_development
+pool: 5 username: root
+password: pass
+socket: /var/run/mysqld/mysqld.sock
+               </code>
+
+              </pre>
             </section>
 
             <section>
-              <h2>Thank You</h2>
+                <h2>Execution</h2>
+                <pre>
+                <code class="ruby">
+rake db:create
+rails generate controller books index
+rails generate model book access_no:integer title:string author:string edition:integer publisher:string
+rake db:migrate
+               </code>
 
-              <p>
-                  <small>Presentation by <a href="https://github.com/gsraman">Sundar Raman G</a></small><br>
-                  <small>Under CSI -BMSIT&M Student Chapter</small>
-              </p>
+              </pre>
+
+            </section>
+
+            <section>
+                <b>app/views/books/index.html.erb</b>
+                <pre>
+                <code class="html">
+<h1>Books</h1><br>
+<h3 style="text-align: center;">Add a book</h3><br>
+<%= form_tag("/books/add", :method=>"post") do %>
+<form action="/books/add" method="post"> <br>
+Access No:<%= text_field_tag(:b_access_no) %><br>
+
+<br>Title: <%= text_field_tag(:b_title) %><br>
+<br>Author: <%= text_field_tag(:b_author) %><br>
+<br>Edition: <%= text_field_tag(:b_edition) %><br>
+<br>Publisher: <%= text_field_tag(:b_publisher) %><br>
+<br><br>
+<%= submit_tag("Add Book") %><br>
+<% end %><br>
+<h3 style="text-align: center;">Search for a book</h3><br>
+<%= form_tag("/books/search", :method=>"post") do %>
+<form action="/books/search" method="post"><br>
+Title: <%= text_field_tag(:bs_title) %>
+<br>
+<br><br>
+<%= submit_tag("Search") %>
+<br>
+<% end %>
+<br>
+</code>
+</pre>
+            </section>
+
+            <section>
+                <b>app/views/books/search.html.erb</b>
+                <pre>
+                <code class="html">
+<h1>Search Result</h1><br>
+<table border=1><br>
+<% @t=Book.find_by_title(params[:bs_title]) %><br>
+<tr><br>
+<th>Access No.</th><br>
+<th>Title</th><br>
+<th>Author</th><br>
+<th>Edition</th><br>
+<th>Publisher</th><br>
+</tr><br>
+<tr><br>
+<td> <%=  @t.access_no %> </td>
+<td> <%= @t.title %> </td>
+<td> <%= @t.author %> </td>
+<td> <%= @t.edition %> </td>
+<td> <%= @t.publisher %> </td>
+</tr><br>
+</table><br>
+<br><br><br>
+<a href="/books/index">Back</a>
+<br>
+</code>
+              </pre>
+            </section>
+
+            <section>
+                <b>controller/books_controller.rb</b>
+                <pre>
+    <code class="ruby">
+class BooksController < ApplicationController
+  def index
+  end
+
+  def add
+
+    Book.create(:access_no=>params[:b_access_no],:title=>params[:b_title],:author=>params[:b_author],:edition=> params[:b_edition],:publisher=> params[:b_publisher])
+
+    redirect_to :action => 'index'
+  end
+
+  def search
+
+  end
+
+end
+    </code>
+  </pre>
+            </section>
+
+            <section>
+                <b>config/routes.rb</b>
+                <pre>
+    <code class="ruby">
+Rails.application.routes.draw do
+
+get "books/index" => "books#index", :as => :index
+match "books/add" => "books#add", :via => :post
+match "books/search" => "books#search", :via => :post
+
+end
+</code>
+  </pre>
+            </section>
+
+            <section>
+                <h2>Start your server</h2>
+                <pre>
+    <code class="ruby">
+rails s
+    </code>
+  </pre>
+                <pre>
+=> Booting Puma
+=> Rails 5.0.0.1 application starting in development on http://localhost:3000
+=> Run `rails server -h` for more startup options
+Puma starting in single mode...
+* Version 3.6.0 (ruby 2.3.1-p112), codename: Sleepy Sunday Serenity
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://localhost:3000
+Use Ctrl-C to stop
+  </pre>
+            </section>
+
+            <section>
+                <h2>Thank You</h2>
+
+                <p>
+                    <small>Presentation by <a href="https://github.com/gsraman">Sundar Raman G</a></small><br>
+
+                </p>
             </section>
 
 
