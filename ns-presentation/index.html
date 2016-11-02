@@ -278,6 +278,139 @@ puts "value of a: $a"
               </pre>
             </section>
 
+            <section>
+              <h2>Iteration of Associative array</h2>
+              <pre>
+                <code class="tcl">
+set personA(Name) "Dave"
+set personA(Age) 14
+foreach index [array names personA] {
+puts "personA($index): $personA($index)"
+}
+                </code>
+              </pre>
+            </section>
+
+            <section>
+              <h2>Dictionaries</h2>
+              <pre>
+                <code class="tcl">
+dict set colours
+colour1 red
+puts $colours
+dict set colours
+colour2 green
+puts $colours
+set colours [dict create colour1 "black" colour2 "white"]
+puts $colours
+                </code>
+              </pre>
+            </section>
+
+            <section>
+              <h2>Procedures</h2>
+              <pre>
+                <code class="tcl">
+proc add {a {b 100} } {
+return [expr $a+$b]
+}
+puts [add 10 30]
+puts [add 10]
+                </code>
+              </pre>
+              <pre>
+40
+110
+              </pre>
+            </section>
+
+            <section>
+              <h2>File I/O</h2>
+              <pre>
+                <code class="tcl">open fileName accessMode
+close fileName</code>
+              </pre>
+              <table style="font-size:0.6em;">
+                <tr>
+                  <th>
+                    Mode
+                  </th>
+                  <th>
+                    Description
+                  </th>
+                </tr>
+                <tr>
+                  <td>
+                    r
+                  </td>
+                  <td>
+                    Opens an existing text file for reading purpose and the file must exist. This is the default mode used when no accessMode is specified.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    w
+                  </td>
+                  <td>
+                    Opens a text file for writing, if it does not exist, then a new file is created else
+                    existing file is truncated.                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    a
+                  </td>
+                  <td>
+                    Opens a text file for writing in appending mode and file must exist. Here, your
+                    program will start appending content in the existing file content.                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    r+
+                  </td>
+                  <td>
+Opens a text file for reading and writing both. File must exist already.                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    w+
+                  </td>
+                  <td>
+                    Opens a text file for reading and writing both. It first truncate the file to zero
+                    length if it exists otherwise create the file if it does not exist.                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    a+
+                  </td>
+                  <td>
+                    Opens a text file for reading and writing both. It creates the file if it does not
+                    exist. The reading will start from the beginning, but writing can only be
+                    appended.
+                  </td>
+                </tr>
+              </table>
+            </section>
+
+            <section>
+              <h2>File example</h2>
+              <pre>
+                <code class="tcl">
+set fp [open "input.txt" w+]
+puts $fp "test"
+close $fp
+set fp [open "input.txt" r]
+set file_data [read $fp]
+puts $file_data
+close $fp
+</code>
+              </pre>
+              <pre>
+test
+              </pre>
+            </section>
+
+
+
           </section>
 
             <section>
