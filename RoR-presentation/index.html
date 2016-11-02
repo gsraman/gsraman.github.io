@@ -6,7 +6,7 @@
 
     <title>Ruby on rails tutorial</title>
 
-    <meta name="description" content="Tutorial on network simulation">
+    <meta name="description" content="Tutorial on Ruby on Rails">
     <meta name="author" content="Sundar Raman G">
 
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -124,9 +124,8 @@ rake db:migrate
 <h1>Books</h1><br>
 <h3 style="text-align: center;">Add a book</h3><br>
 <%= form_tag("/books/add", :method=>"post") do %>
-<form action="/books/add" method="post"> <br>
+<form action="/books/add" method="post">
 Access No:<%= text_field_tag(:b_access_no) %><br>
-
 <br>Title: <%= text_field_tag(:b_title) %><br>
 <br>Author: <%= text_field_tag(:b_author) %><br>
 <br>Edition: <%= text_field_tag(:b_edition) %><br>
